@@ -7,7 +7,7 @@ class App:
     def __init__(self):
         pyxel.init(255, 155, fps=60, scale=2, border_width=10, border_color=0x0d0015, caption='Pyxel & PyAudio')
         self.CHUNK = pyxel.width*2
-        self.RATE = 22050 #44100
+        self.RATE = 16000 #44100
         self.P = pyaudio.PyAudio()
         self.stream = self.P.open(format=pyaudio.paInt16, channels=1, rate=self.RATE, frames_per_buffer=self.CHUNK, input=True, output=False)
         pyxel.run(self.update, self.draw)
